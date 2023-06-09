@@ -1,5 +1,5 @@
 <?php
-require('auth.php');
+require('admin/auth.php');
 ?>
 <!doctype html>
 <html lang="en">
@@ -19,9 +19,9 @@ require('auth.php');
             <?php
             if (isset($_SESSION['userName'])) {
                 $firstName = $_SESSION['firstName'];
-                echo "Welcome, $firstName! <a href='logout.php'>Log out</a>";
+                echo "Welcome, $firstName! <a href='admin/logout.php'>Log out</a>";
             } else {
-                echo "You are not logged in. <a href='login.php'>Log in</a>";
+                echo "You are not logged in. <a href='admin/login.php'>Log in</a>";
             }
             ?>
         </div>

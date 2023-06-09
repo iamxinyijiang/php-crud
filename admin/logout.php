@@ -5,6 +5,6 @@ session_start();
 session_destroy();
 
 // Redirect back to the previous page
-header("Location:index.php ");
+header("Location:../index.php ");
 exit();
 ?>

@@ -17,9 +17,9 @@
             session_start();
             if (isset($_SESSION['userName'])) {
                 $firstName = $_SESSION['firstName'];
-                echo "Welcome, $firstName! <a href='logout.php'>Log out</a>";
+                echo "Welcome, $firstName! <a href='admin/logout.php'>Log out</a>";
             } else {
-                echo "You are not logged in. <a href='login.php' target='blank'>Log in</a>";
+                echo "You are not logged in. <a href='admin/login.php' target='blank'>Log in</a>";
             }
             ?>
         </div>

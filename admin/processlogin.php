@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('db.php');
+require('../db.php');
 
 if (isset($_POST['userName'])) {
     $userName = stripslashes($_POST['userName']);
@@ -23,7 +23,7 @@ if (isset($_POST['userName'])) {
         
         $_SESSION['firstName'] = $firstName;
 
-        header("Location: adminMenu.php");
+        header("Location: ../adminMenu.php");
         exit();
     } else {
         echo "<div class='form'>
