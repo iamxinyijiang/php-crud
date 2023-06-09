@@ -33,7 +33,7 @@
         </div>
     </section>
     <footer>
-        <a href="index.php">Return to Home</a>
+        <a href="logout.php">Log out</a>
         <p>&copy; 2023 SunnySpot Accommodation</p>
     </footer>
 </body>

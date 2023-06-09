@@ -53,10 +53,9 @@ section {
     padding: 1em;
     column-gap: 1em;
     row-gap: 1em;
-
 }
 
-section.non-index{
+section.non-index {
     max-width: 1024px;
     margin: auto;
 }
@@ -99,17 +98,8 @@ form.delete-cabin-form {
     margin-bottom: 0;
 }
 
-form.insert-form{
+form.insert-form {
     display: block;
-}
-
-
-form.delete-cabin-form input.delete-cabin-button[type="submit"] {
-    background-color: #c62828;
-}
-
-form.delete-cabin-form input.delete-cabin-button[type="submit"]:hover {
-    background-color: #871c1c;
 }
 
 article {

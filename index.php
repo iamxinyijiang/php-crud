@@ -48,7 +48,7 @@
             ?>
         </section>
     <footer>
-        <a href="adminMenu.php" target="blank">Admin Panel</a>
+        <a href="login.php" target="blank">Admin Panel</a>
         <p>&copy; 2023 SunnySpot Accommodation</p>
     </footer>
 </body>
