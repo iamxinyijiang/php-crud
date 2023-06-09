@@ -1,0 +1,227 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    color: #343434;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+p {
+    font-family: "Quando", Arial, serif;
+    color: #173e43;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1em;
+    flex: 0 0 auto;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+header a {
+    text-decoration: none;
+}
+
+section {
+    flex: 1 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em;
+    column-gap: 1em;
+    row-gap: 1em;
+
+}
+
+section.non-index{
+    max-width: 1024px;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+form label {
+    margin-right: 0.5em;
+}
+
+form input[type="text"],
+form textarea,
+form select {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    font-family: inherit;
+    width: 100%;
+}
+
+form input[type="submit"] {
+    padding: 0.5em 1em;
+    background-color: #173e43;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0e2537;
+}
+
+form.delete-cabin-form {
+    margin-bottom: 0;
+}
+
+form.insert-form{
+    display: block;
+}
+
+
+form.delete-cabin-form input.delete-cabin-button[type="submit"] {
+    background-color: #c62828;
+}
+
+form.delete-cabin-form input.delete-cabin-button[type="submit"]:hover {
+    background-color: #871c1c;
+}
+
+article {
+    width: 350px;
+    margin-bottom: 2em;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 0.5em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #173e43;
+}
+
+footer {
+    background-color: #173e43;
+    color: white;
+    text-align: center;
+    padding: 2em;
+    margin-top: 1em;
+    flex: 0 0 auto;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+footer a,
+footer p {
+    color: white;
+}
+
+section .current-photo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+span {
+    font-weight: bold;
+}
+
+/* Distinct style for the deleteCabin.php form */
+form.delete-cabin-details {
+    margin-top: 2em;
+    padding: 1em;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+}
+
+form.delete-cabin-details label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+form.delete-cabin-details input[type="text"],
+form.delete-cabin-details textarea,
+form.delete-cabin-details select {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    font-family: inherit;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+}
+
+form.delete-cabin-details img.current-photo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+form.delete-cabin-details input.delete-cabin-button[type="submit"] {
+    padding: 0.5em 1em;
+    background-color: #c62828;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 2em;
+}
+
+form.delete-cabin-details input.delete-cabin-button[type="submit"]:hover {
+    background-color: #871c1c;
+}
+
+button.button {
+    align-content: center;
+    width: 14em;
+    padding: 0.8em 1.6em;
+    font-size: larger;
+    background-color: #173e43;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    border: 2px solid #173e43;
+}
+
+button.button:hover {
+    background-color: #0e2537;
+    border: 2px solid white;
+}
