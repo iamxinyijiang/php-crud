@@ -1,3 +1,6 @@
+<?php
+require('auth.php');
+?>
 <!doctype html>
 <html lang="en">
 
@@ -10,6 +13,19 @@
 </head>
 
 <body>
+    <div class="welcome-message">
+
+        <div class="welcome-message-items">
+            <?php
+            if (isset($_SESSION['userName'])) {
+                $firstName = $_SESSION['firstName'];
+                echo "Welcome, $firstName! <a href='logout.php'>Log out</a>";
+            } else {
+                echo "You are not logged in. <a href='login.php'>Log in</a>";
+            }
+            ?>
+        </div>
+    </div>
     <header>
         <a href="index.php">
             <img src="images/accommodation.png" alt="Accommodation"> </a>
@@ -87,7 +103,7 @@
     </section>
 
     <footer>
-        <a href="adminMenu.php">Return to Admin Panel</a>
+        <p></p><a href="adminMenu.php">Return to Admin Menu</a></p>
         <p>&copy; 2023 SunnySpot Accommodation</p>
     </footer>
 </body>

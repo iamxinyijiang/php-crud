@@ -1,3 +1,6 @@
+<?php
+require('auth.php');
+?>
 <!doctype html>
 <html lang="en">
 
@@ -10,8 +13,28 @@
 </head>
 
 <body>
-    <header> <img src="images/accommodation.png" alt="Accommodation">
-        <h1>Sunnyspot Accommodation</h1>
+    <div class="welcome-message">
+
+        <div class="welcome-message-items">
+            <?php
+            if (isset($_SESSION['userName'])) {
+                $firstName = $_SESSION['firstName'];
+                echo "Welcome, $firstName! <a href='logout.php'>Log out</a>";
+            } else {
+                echo "You are not logged in. <a href='login.php'>Log in</a>";
+            }
+            ?>
+        </div>
+    </div>
+    <header>
+
+        <a href="index.php">
+            <img src="images/accommodation.png" alt="Accommodation"> </a>
+        <a href="index.php">
+            <h1>SunnySpot Accommodation</h1>
+        </a>
+
+
     </header>
 
     <section class="non-index">
@@ -29,8 +52,8 @@
             // Loop through each row of the result set
             while ($row = $result->fetch_assoc()) {
                 echo '<article>';
-                echo '<h2>' . $row['cabinType'] . '</h2>';
                 echo '<img src="' . $row['photo'] . '" alt="' . $row['cabinType'] . '">';
+                echo '<h2>' . $row['cabinType'] . '</h2>';
                 echo '<p><span>Details: </span>' . $row['cabinDescription'] . '</p>';
                 echo '<p><span>Price per night: </span>$' . $row['pricePerNight'] . '</p>';
                 echo '<p><span>Price per week: </span>$' . $row['pricePerWeek'] . '</p>';
@@ -44,9 +67,8 @@
         $conn->close();
         ?>
     </section>
-
     <footer>
-        <a href="adminMenu.php">Admin</a>
+        <p><a href="adminMenu.php">Return to Admin Menu</a></p>
         <p>&copy; 2023 SunnySpot Accommodation</p>
     </footer>
 </body>

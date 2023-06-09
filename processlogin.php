@@ -14,6 +14,15 @@ if (isset($_POST['userName'])) {
 
     if ($rows == 1) {
         $_SESSION['userName'] = $userName;
+        
+        // Fetch the first name from the database
+        $firstNameQuery = "SELECT firstName FROM `admin` WHERE userName='$userName'";
+        $firstNameResult = mysqli_query($conn, $firstNameQuery) or die(mysqli_error($conn));
+        $row = mysqli_fetch_assoc($firstNameResult);
+        $firstName = $row['firstName'];
+        
+        $_SESSION['firstName'] = $firstName;
+
         header("Location: adminMenu.php");
         exit();
     } else {

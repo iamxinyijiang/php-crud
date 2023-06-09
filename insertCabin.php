@@ -1,5 +1,8 @@
+<?php
+require('auth.php');
+?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +12,19 @@
 </head>
 
 <body>
+    <div class="welcome-message">
+
+        <div class="welcome-message-items">
+            <?php
+            if (isset($_SESSION['userName'])) {
+                $firstName = $_SESSION['firstName'];
+                echo "Welcome, $firstName! <a href='logout.php'>Log out</a>";
+            } else {
+                echo "You are not logged in. <a href='login.php'>Log in</a>";
+            }
+            ?>
+        </div>
+    </div>
     <header>
         <a href="index.php">
             <img src="images/accommodation.png" alt="Accommodation"> </a>
@@ -17,10 +33,11 @@
         </a>
     </header>
 
+
     <section class="non-index">
         <div>
             <h2>Add a New Cabin</h2>
-            <form class= "insert-form"action="processInsertCabin.php" method="POST" enctype="multipart/form-data">
+            <form class="insert-form" action="processInsertCabin.php" method="POST" enctype="multipart/form-data">
                 <label for="cabinType">Cabin Name:</label>
                 <input type="text" id="cabinType" name="cabinType" required><br>
 
@@ -41,7 +58,7 @@
         </div>
     </section>
     <footer>
-        <a href="adminMenu.php">Return to Admin Panel</a>
+        <p></p><a href="adminMenu.php">Return to Admin Menu</a></p>
         <p>&copy; 2023 SunnySpot Accommodation</p>
     </footer>
 </body>
