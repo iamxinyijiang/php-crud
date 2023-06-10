@@ -42,7 +42,7 @@
 
         // Retrieve cabin information from the database
         // Query the database for cabin information
-        $query = "SELECT * FROM Cabin";
+        $query = "SELECT * FROM cabin";
         $result = $conn->query($query);
 
         // Display cabin information dynamically

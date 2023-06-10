@@ -7,14 +7,14 @@ if (isset($_POST['cabinID'])) {
     $cabinID = $_POST['cabinID'];
 
     // Get the cabin photo filename from the database
-    $query = "SELECT photo FROM Cabin WHERE cabinID = $cabinID";
+    $query = "SELECT photo FROM cabin WHERE cabinID = $cabinID";
     $result = $conn->query($query);
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $photo = $row['photo'];
 
         // Delete the cabin from the database
-        $deleteQuery = "DELETE FROM Cabin WHERE cabinID = $cabinID";
+        $deleteQuery = "DELETE FROM cabin WHERE cabinID = $cabinID";
 
         if ($conn->query($deleteQuery) === TRUE) {
             echo "Cabin deleted successfully!";

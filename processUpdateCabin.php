@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $cabinID = $_POST['cabinID'];
 
         // Retrieve the existing cabin details from the database
-        $query = "SELECT * FROM Cabin WHERE cabinID = $cabinID";
+        $query = "SELECT * FROM cabin WHERE cabinID = $cabinID";
         $result = $conn->query($query);
 
         if ($result->num_rows > 0) {
