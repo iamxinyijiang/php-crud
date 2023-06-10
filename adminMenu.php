@@ -32,7 +32,7 @@ require('admin/auth.php');
         </a>
     </header>
     <section class="non-index">
-        <div style="display:flex;flex-direction:column;">
+        <div>
             <h2>Administrative Menu</h2>
             <nav>
                 <ul>
