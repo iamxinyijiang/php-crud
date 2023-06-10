@@ -32,8 +32,11 @@ require('admin/auth.php');
             <h1>SunnySpot Accommodation</h1>
         </a>
     </header>
-
-
+    <ul class="breadcrumb">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="adminMenu.php">Admin Menu</a></li>
+        <li>Insert Cabin</li>
+    </ul>
     <section class="non-index">
         <div>
             <h2>Add a New Cabin</h2>

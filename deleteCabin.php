@@ -33,7 +33,11 @@ require('admin/auth.php');
             <h1>SunnySpot Accommodation</h1>
         </a>
     </header>
-
+    <ul class="breadcrumb">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="adminMenu.php">Admin Menu</a></li>
+        <li>Delete Cabin</li>
+    </ul>
     <section class="non-index">
         <div>
             <h2>Select a Cabin to Delete:</h2><br>

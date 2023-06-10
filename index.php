@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 
@@ -14,7 +17,6 @@
 
         <div class="welcome-message-items">
             <?php
-            session_start();
             if (isset($_SESSION['userName'])) {
                 $firstName = $_SESSION['firstName'];
                 echo "Welcome, $firstName! <a href='admin/logout.php'>Log out</a>";
@@ -31,9 +33,10 @@
         <a href="index.php">
             <h1>SunnySpot Accommodation</h1>
         </a>
-
-
     </header>
+    <ul class="breadcrumb">
+        <li>Home</li>
+    </ul>
 
     <section>
         <?php

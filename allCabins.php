@@ -33,10 +33,13 @@ require('admin/auth.php');
         <a href="index.php">
             <h1>SunnySpot Accommodation</h1>
         </a>
-
-
     </header>
-
+    <ul class="breadcrumb">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="adminMenu.php">Admin Menu</a></li>
+        <li>View All Cabins</li>
+    </ul>
+    <h1 style="margin:auto;">View All Cabins</h1>
     <section class="non-index">
         <?php
         // Include the db.php file for database connection
